@@ -30,11 +30,6 @@ const prepareTransfer = (tx, reason, from, to) => {
 EXPOSED FUNCTIONS
 ==================
  */
-export const getTransactionOwner = (tx) => {
-  // Get a certain transaction and extract the owner form the response (needed for validation if a transfer is allowed)
-  // This function is optional. Remove the owner check in 'BdbService.js' if you would like to omit validation
-};
-
 export const createTransaction = (asset, metaData, from, hidden) => new Promise(async (resolve, reject) => {
   // Send the prepared create transaction to the blockchain
 });
