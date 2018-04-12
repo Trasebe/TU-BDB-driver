@@ -91,34 +91,30 @@ export default class BdbService {
    * @param {Ed25519Keypair} to
    * @returns {Promise<void>}
    */
-  transferTransaction = async (tx, reason, from, to) => {
-    if (tx.outputs[0].public_keys[0] === from.publicKey) {
-      return this.executor(TransactionService.transferTransaction,
-        tx,
-        reason,
-        from,
-        to
-      );
-    }
-    throw new Error(ErrorMessages.AssetNotOwnedByCaller);
-  };
+  transferTransaction = async (tx, reason, from, to) =>
+    this.executor(TransactionService.transferTransaction, tx, reason, from, to);
 
   /**
    * Executing a burn/transfer transaction
-   * @param {Object} tx
+   * @param {string} tx
    * @param {string} reason
    * @param {Ed25519Keypair} from
    * @returns {Promise<void>}
    */
-  burnTransaction = async (tx, reason, from) => {
-    if (tx.outputs[0].public_keys[0] === from.publicKey) {
-      return this.executor(TransactionService.transferTransaction,
-        tx,
-        reason,
-        from,
-        BURN_ADDRESS
-      );
-    }
-    throw new Error(ErrorMessages.AssetNotOwnedByCaller);
-  };
+  burnTransaction = async (tx, reason, from) =>
+    this.executor(TransactionService.transferTransaction,
+      tx,
+      reason,
+      from,
+      BURN_ADDRESS
+    );
+
+  /**
+   * Getting a transaction by ID. Option to choose all details (block info + vote info) or basic transaction details.
+   * @param {string} txId
+   * @param {boolean} allTxDetails
+   * @returns {Promise<void>}
+   */
+  getTransaction = async (txId, allTxDetails = false) =>
+    this.executor(TransactionService.getTransaction, txId, allTxDetails);
 }

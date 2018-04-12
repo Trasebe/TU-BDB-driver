@@ -69,6 +69,23 @@ class Bigchain extends Component {
     );
   };
 
+  burnTransaction = async () => {
+    this.setState({ loading: true });
+    this.setState(
+      {
+        transferred: true,
+        txTransfer: await this.bdbService
+          .burnTransaction(
+            this.state.transferred ? this.state.txTransfer : this.state.tx,
+            "Burned for fun",
+            this.state.transferred ? this.state.alice : this.state.bob
+          )
+          .catch(e => this.handleError(e))
+      },
+      () => this.setState({ loading: false })
+    );
+  };
+
   handleError = e => {
     console.log("error ", e); // eslint-disable-line
   };
@@ -91,6 +108,15 @@ class Bigchain extends Component {
           loading={this.state.loading}
         >
           Transfer
+        </Button>
+        <br/>
+        <br/>
+        <Button
+          type="primary"
+          onClick={this.burnTransaction}
+          loading={this.state.loading}
+        >
+          Burn
         </Button>
 
         <Row>
