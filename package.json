@@ -1,7 +1,7 @@
 {
-  "name": "TU-BigchainDB-Getting-Started",
+  "name": "TU-BDB-driver",
   "version": "1.0.0",
-  "description": "BigchainDB Getting started repo - Finished",
+  "description": "BigchainDB driver boilerplate",
   "scripts": {
     "build": "",
     "precommit": "yarn lint --fix",
@@ -12,17 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeroenptrs/react-stack-boilerplate.git"
-  },
-  "keywords": [
-    "React",
-    "Parcel",
-    "JSS",
-    "JS",
-    "HTML",
-    "boilerplate",
-    "starter"
-  ],
+    "url": "git+https://github.com/Trasebe/TU-BDB-driver.git"
+  }
   "author": "Maurice Dalderup <Maurice_Dalderup@hotmail.com>",
   "license": "MIT",
   "dependencies": {
