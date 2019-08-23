@@ -19,7 +19,7 @@
     "antd": "3.4.0",
     "babel-polyfill": "6.26.0",
     "bigchaindb-driver": "4.0.0",
-    "bip39": "2.5.0",
+    "bip39": "2.6.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.3",
