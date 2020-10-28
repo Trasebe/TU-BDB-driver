@@ -31,10 +31,10 @@
     "jss-vendor-prefixer": "8.0.0",
     "prop-types": "15.6.1",
     "raf": "3.4.0",
-    "react": "16.3.1",
+    "react": "16.14.0",
     "react-dom": "16.3.1",
     "react-jss": "8.4.0",
-    "react-test-renderer": "16.3.1"
+    "react-test-renderer": "16.14.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
