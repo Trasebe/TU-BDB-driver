@@ -16,7 +16,7 @@
   "author": "Maurice Dalderup <Maurice_Dalderup@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "antd": "3.4.0",
+    "antd": "3.26.20",
     "babel-polyfill": "6.26.0",
     "bigchaindb-driver": "4.0.0",
     "bip39": "2.5.0",
